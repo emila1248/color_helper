@@ -45,7 +45,6 @@ class CardModel3 extends StatelessWidget {
 
     return SizedBox(
       width: 200*scale,
-      height: 172*scale,
       child: Column(
         children: [
           colorCard(color1, color2, text1, 200*scale),
@@ -53,9 +52,9 @@ class CardModel3 extends StatelessWidget {
           colorCard(color3, color1, text3, 200*scale),
           Row(
             children: [
-              colorCard(color4, color2, text4, 98*scale),
-              SizedBox(width: 4*scale),
-              colorCard(color5, color2, text5, 98*scale),
+              colorCard(color4, color2, text4, 96*scale),
+              SizedBox(width: 8*scale),
+              colorCard(color5, color2, text5, 96*scale),
             ],
           ),
         ],

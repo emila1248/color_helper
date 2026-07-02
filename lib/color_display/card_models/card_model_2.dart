@@ -43,7 +43,6 @@ class CardModel2 extends StatelessWidget {
 
     return SizedBox(
       width: 200*scale,
-      height: 172*scale,
       child: Column(
         children: [
           Row(
