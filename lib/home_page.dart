@@ -14,30 +14,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: colorScheme.surfaceContainer,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          spacing: 14,
-          children: [
-            ElevatedButton(
-              onPressed: () => {},
-              style: ButtonStyle(
-                backgroundColor: WidgetStatePropertyAll(settings.seedColor),
-                padding: WidgetStatePropertyAll(EdgeInsetsGeometry.zero),
-                fixedSize: WidgetStatePropertyAll(Size(88, 52))
-              ),
-              child: Text(
-                'Seed',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: colorScheme.onPrimaryFixed,
-                  fontSize: 19,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-            ColorDisplay(scale: 1),
-          ],
-        )
+        child: ColorDisplay(scale: 1),
       ),
     );
   }
