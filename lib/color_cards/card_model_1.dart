@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ColorCard1 extends StatelessWidget {
+class CardModel1 extends StatelessWidget {
   final double scale;
 
   final Color color1;
@@ -13,7 +13,7 @@ class ColorCard1 extends StatelessWidget {
   final String text3;
   final String text4;
 
-  const ColorCard1({
+  const CardModel1({
     super.key, required this.scale,
     required this.color1, required this.color2, required this.color3, required this.color4,
     required this.text1, required this.text2, required this.text3, required this.text4,
@@ -24,7 +24,6 @@ class ColorCard1 extends StatelessWidget {
     Widget colorCard(Color backgroundColor, Color textColor, String text) {
       return Expanded(
         child: Container(
-          width: 200*scale,
           alignment: Alignment.center,
           color: backgroundColor,
           child: Text(
