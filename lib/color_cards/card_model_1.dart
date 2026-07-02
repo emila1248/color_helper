@@ -42,7 +42,7 @@ class CardModel1 extends StatelessWidget {
 
     return SizedBox(
       width: 200*scale,
-      height: 180*scale,
+      height: 168*scale,
       child: Column(
         children: [
           colorCard(color1, color2, text1),

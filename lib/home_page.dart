@@ -13,14 +13,27 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       body: Center(
-        child: Row(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          spacing: 8,
+          spacing: 10,
           children: [
-            primaryColorCard(colorScheme),
-            secondaryColorCard(colorScheme),
-            tertiaryColorCard(colorScheme),
-            errorColorCard(colorScheme),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 8,
+              children: [
+                primaryColorCard(colorScheme),
+                secondaryColorCard(colorScheme),
+                tertiaryColorCard(colorScheme),
+                errorColorCard(colorScheme),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 8,
+              children: [
+                primaryFixedColorCard(colorScheme),
+              ],
+            ),
           ],
         ),
       ),
