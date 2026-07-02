@@ -1,11 +1,12 @@
+import 'package:color_helper/color_display/card_models/surface_card.dart';
 import 'package:flutter/material.dart';
 import 'card_models/card_model_1.dart';
 import 'card_models/card_model_2.dart';
 import 'card_models/card_model_3.dart';
 
-CardModel1 primaryCard(ColorScheme colorScheme) {
+CardModel1 primaryCard(ColorScheme colorScheme, double scale) {
   return CardModel1(
-    scale: 1,
+    scale: scale,
     color1: colorScheme.primary,
     color2: colorScheme.onPrimary,
     color3: colorScheme.primaryContainer,
@@ -17,9 +18,9 @@ CardModel1 primaryCard(ColorScheme colorScheme) {
   );
 }
 
-CardModel1 secondaryCard(ColorScheme colorScheme) {
+CardModel1 secondaryCard(ColorScheme colorScheme, double scale) {
   return CardModel1(
-    scale: 1,
+    scale: scale,
     color1: colorScheme.secondary,
     color2: colorScheme.onSecondary,
     color3: colorScheme.secondaryContainer,
@@ -31,9 +32,9 @@ CardModel1 secondaryCard(ColorScheme colorScheme) {
   );
 }
 
-CardModel1 tertiaryCard(ColorScheme colorScheme) {
+CardModel1 tertiaryCard(ColorScheme colorScheme, double scale) {
   return CardModel1(
-    scale: 1,
+    scale: scale,
     color1: colorScheme.tertiary,
     color2: colorScheme.onTertiary,
     color3: colorScheme.tertiaryContainer,
@@ -45,9 +46,9 @@ CardModel1 tertiaryCard(ColorScheme colorScheme) {
   );
 }
 
-CardModel1 errorCard(ColorScheme colorScheme) {
+CardModel1 errorCard(ColorScheme colorScheme, double scale) {
   return CardModel1(
-    scale: 1,
+    scale: scale,
     color1: colorScheme.error,
     color2: colorScheme.onError,
     color3: colorScheme.errorContainer,
@@ -59,9 +60,9 @@ CardModel1 errorCard(ColorScheme colorScheme) {
   );
 }
 
-CardModel2 primaryFixedCard(ColorScheme colorScheme) {
+CardModel2 primaryFixedCard(ColorScheme colorScheme, double scale) {
   return CardModel2(
-    scale: 1,
+    scale: scale,
     color1: colorScheme.primaryFixed,
     color2: colorScheme.primaryFixedDim,
     color3: colorScheme.onPrimaryFixed,
@@ -73,9 +74,9 @@ CardModel2 primaryFixedCard(ColorScheme colorScheme) {
   );
 }
 
-CardModel2 secondaryFixedCard(ColorScheme colorScheme) {
+CardModel2 secondaryFixedCard(ColorScheme colorScheme, double scale) {
   return CardModel2(
-    scale: 1,
+    scale: scale,
     color1: colorScheme.secondaryFixed,
     color2: colorScheme.secondaryFixedDim,
     color3: colorScheme.onSecondaryFixed,
@@ -87,9 +88,9 @@ CardModel2 secondaryFixedCard(ColorScheme colorScheme) {
   );
 }
 
-CardModel2 tertiaryFixedCard(ColorScheme colorScheme) {
+CardModel2 tertiaryFixedCard(ColorScheme colorScheme, double scale) {
   return CardModel2(
-    scale: 1,
+    scale: scale,
     color1: colorScheme.tertiaryFixed,
     color2: colorScheme.tertiaryFixedDim,
     color3: colorScheme.onTertiaryFixed,
@@ -101,9 +102,9 @@ CardModel2 tertiaryFixedCard(ColorScheme colorScheme) {
   );
 }
 
-CardModel3 surfaceCard(ColorScheme colorScheme) {
+CardModel3 inverseSurfaceCard(ColorScheme colorScheme, double scale) {
   return CardModel3(
-    scale: 1,
+    scale: scale,
     color1: colorScheme.inverseSurface,
     color2: colorScheme.onInverseSurface,
     color3: colorScheme.inversePrimary,
@@ -115,4 +116,8 @@ CardModel3 surfaceCard(ColorScheme colorScheme) {
     text4: 'scrim',
     text5: 'shadow',
   );
+}
+
+SurfaceCard surfaceCard(double scale) {
+  return SurfaceCard(scale: scale);
 }

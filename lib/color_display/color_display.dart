@@ -1,0 +1,81 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../settings.dart';
+import 'color_cards.dart';
+
+class ColorDisplay extends StatelessWidget {
+  final double scale;
+
+  const ColorDisplay({super.key, required this.scale});
+
+  @override
+  Widget build(BuildContext context) {
+    final settings = context.watch<Settings>();
+    final colorScheme = settings.themeData.colorScheme;
+
+    final spacing = 8.0*scale;
+
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      spacing: (spacing + 4)*scale,
+      children: [
+        Container(
+          width: 64*scale,
+          height: 64*scale,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: settings.seedColor,
+            borderRadius: BorderRadius.circular(32*scale)
+          ),
+          child: Text(
+            'Seed',
+            textAlign: TextAlign.center,
+            textScaler: TextScaler.linear(scale),
+            style: TextStyle(
+              color: colorScheme.onPrimaryFixed,
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: spacing,
+          children: [
+            Column(
+              spacing: spacing,
+              children: [
+                Row(
+                  spacing: spacing,
+                  children: [
+                    primaryCard(colorScheme, scale),
+                    secondaryCard(colorScheme, scale),
+                    tertiaryCard(colorScheme, scale),
+                  ],
+                ),
+                Row(
+                  spacing: spacing,
+                  children: [
+                    primaryFixedCard(colorScheme, scale),
+                    secondaryFixedCard(colorScheme, scale),
+                    tertiaryFixedCard(colorScheme, scale),
+                  ],
+                ),
+                surfaceCard(scale),
+              ],
+            ),
+            Column(
+              spacing: spacing,
+              children: [
+                errorCard(colorScheme, scale),
+                inverseSurfaceCard(colorScheme, scale),
+              ],
+            )
+          ],
+        ),
+      ],
+    );
+  }
+}

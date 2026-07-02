@@ -27,7 +27,7 @@ class CardModel3 extends StatelessWidget {
       return Container(
         alignment: Alignment.center,
         width: width,
-        height: 42,
+        height: 42*scale,
         color: backgroundColor,
         child: Text(
           text,
@@ -54,7 +54,7 @@ class CardModel3 extends StatelessWidget {
           Row(
             children: [
               colorCard(color4, color2, text4, 98*scale),
-              SizedBox(width: 4),
+              SizedBox(width: 4*scale),
               colorCard(color5, color2, text5, 98*scale),
             ],
           ),
