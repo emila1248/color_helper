@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'color_cards/color_cards.dart';
+import 'color_cards.dart';
 import 'settings.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,23 +15,44 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          spacing: 10,
+          spacing: 12,
           children: [
+            Container(
+              width: 64,
+              height: 64,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: settings.seedColor,
+                borderRadius: BorderRadius.circular(64)
+              ),
+              child: Text(
+                'Seed',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: colorScheme.onPrimaryFixed,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               spacing: 8,
               children: [
-                primaryColorCard(colorScheme),
-                secondaryColorCard(colorScheme),
-                tertiaryColorCard(colorScheme),
-                errorColorCard(colorScheme),
+                primaryCard(colorScheme),
+                secondaryCard(colorScheme),
+                tertiaryCard(colorScheme),
+                errorCard(colorScheme),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               spacing: 8,
               children: [
-                primaryFixedColorCard(colorScheme),
+                primaryFixedCard(colorScheme),
+                secondaryFixedCard(colorScheme),
+                tertiaryFixedCard(colorScheme),
+                surfaceCard(colorScheme),
               ],
             ),
           ],

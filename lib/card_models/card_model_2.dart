@@ -48,8 +48,8 @@ class CardModel2 extends StatelessWidget {
         children: [
           Row(
             children: [
-              colorCard(color1, color3, text1, 100*scale, 62*scale),
-              colorCard(color2, color3, text2, 100*scale, 62*scale),
+              colorCard(color1, color3, text1, 100*scale, 60*scale),
+              colorCard(color2, color3, text2, 100*scale, 60*scale),
             ],
           ),
           colorCard(color3, color1, text3, 200*scale, 42*scale),
