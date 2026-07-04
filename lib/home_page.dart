@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
     final colorScheme = settings.themeData.colorScheme;
 
     return Scaffold(
-      backgroundColor: colorScheme.surfaceContainer,
+      backgroundColor: colorScheme.surface,
       body: Center(
         child: ColorDisplay(scale: 1),
       ),
