@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../settings.dart';
 import 'color_cards.dart';
-import 'color_text_field.dart';
 
 class ColorDisplay extends StatelessWidget {
   final double scale;
@@ -43,7 +41,6 @@ class ColorDisplay extends StatelessWidget {
                 ),
               ),
             ),
-            ColorTextField(scale: scale)
           ],
         ),
         Row(
